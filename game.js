@@ -14,6 +14,16 @@ function startGame() {
   if (gamepads[0] != null) {
     gameStartVibration();
   }
+  var gameTable = document.createElement("table");
+  for (var i = 0; i < 16; i++) {
+    var gameTr = document.createElement("tr");
+    for (var j = 0; j < 16; j++) {
+      var gameTd = document.createElement("td");
+      gameTr.appendChild(gameTd);
+    }
+    gameTable.appendChild(gameTr);
+  }
+  gamePage.append(gameTable);
   homePage.classList.add("hidden");
   window.currentPage = "game";
   return;
@@ -23,6 +33,8 @@ function exitGame() {
   leavePause();
   homePage.classList.remove("hidden");
   window.currentPage = "home";
+  const gameTable = document.querySelector("#game > table");
+  gameTable.parentNode.removeChild(gameTable);
   return;
 }
 
