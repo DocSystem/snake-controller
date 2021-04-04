@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Snake</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="home" id="homePage">
+      <div class="startGameButton" onclick="startGame()" onmouseenter="buttonHover(this)" onmouseleave="buttonUnHover(this)">JOUER</div>
+    </div>
+    <div class="game" id="game">
+
+    </div>
+    <div class="pausemenu hidden" id="pauseMenu">
+      <ul>
+        <li onclick="leavePause()" class="pausemenu_button" onmouseenter="buttonHover(this)" onmouseleave="buttonUnHover(this)">Reprendre le jeu</li>
+        <li onclick="exitGame()" class="pausemenu_button" onmouseenter="buttonHover(this)" onmouseleave="buttonUnHover(this)">Quitter le jeu</li>
+      </ul>
+    </div>
+    <script src="game.js" charset="utf-8"></script>
+    <script src="controller.js" charset="utf-8"></script>
+  </body>
+</html>
